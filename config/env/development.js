@@ -10,11 +10,28 @@
  *
  */
 
+require('dotenv').config();
+
 module.exports = {
 
   /***************************************************************************
    * Set the default database connection for models in the development       *
    * environment (see config/connections.js and config/models.js )           *
    ***************************************************************************/
+  connection: {
+    developmentPostgresqlServer: {
+      adapter: 'sails-postgresql',
+      host: process.env.DB_HOST,
+      user: process.env.DB_USER, 
+      password: process.env.DB_PASS,
+      database: process.env.DB_NAME
+    }
+  },
 
-}
+ models: {
+    connection: 'developmentPostgresqlServer',
+    migrate: 'safe'
+  },
+
+  port: 3000,
+};
