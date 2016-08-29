@@ -92,6 +92,7 @@ dump.rdb
 # related ecosystem.
 ################################################
 lib-cov
+coverage
 *.seed
 *.log
 *.out

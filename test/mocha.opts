@@ -1,0 +1,6 @@
+--require should
+--reporter list
+--ui bdd
+--mochify "./test/unit/*.js"
+--recursive 
+--timeout 5s
