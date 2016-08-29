@@ -27,7 +27,8 @@
   "scripts": {
     "debug": "node debug app.js",
     "start": "node app.js",
-    "test": "NODE_ENV=test istanbul cover _mocha -- -- ./test/bootstrap.spec.js -- ./test/unit/*.test.js"
+    "test": "NODE_ENV=test istanbul cover _mocha -- -- ./test/bootstrap.spec.js -- ./test/unit/*.test.js",
+    "cucumber": "NODE_ENV=test istanbul cover cucumber.js"
   },
   "main": "app.js",
   "repository": {
@@ -38,6 +39,7 @@
   "license": "",
   "devDependencies": {
     "assert": "^1.4.1",
+    "cucumber": "^1.2.2",
     "grunt-mocha-istanbul": "^5.0.2",
     "istanbul": "^0.4.5",
     "mocha": "^3.0.2",
