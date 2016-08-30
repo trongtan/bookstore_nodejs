@@ -18,7 +18,7 @@ module.exports = {
    * Set the default database connection for models in the development       *
    * environment (see config/connections.js and config/models.js )           *
    ***************************************************************************/
-  connection: {
+  connections: {
     developmentPostgresqlServer: {
       adapter: 'sails-postgresql',
       host: process.env.DB_HOST,
@@ -30,7 +30,7 @@ module.exports = {
 
  models: {
     connection: 'developmentPostgresqlServer',
-    migrate: 'safe'
+    migrate: 'alter'
   },
 
   port: 3000,
