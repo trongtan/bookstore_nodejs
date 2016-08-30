@@ -25,11 +25,23 @@ html
           + Import stylesheets from other directories
           + Use a different or additional preprocessor, like SASS, SCSS or Stylus
     // STYLES
+    link(rel="stylesheet", href="/styles/bootstrap-theme.css")
+    link(rel="stylesheet", href="/styles/bootstrap.css")
     link(rel="stylesheet", href="/styles/importer.css")
     // STYLES END
     block styles
 
   body
+
+    div(class="navbar navbar-fixed-top navbar-bs")
+      div(class="container")
+        div(class="nav-header")
+          a(class="navbar-brand navbar-brand-bs" href="/") BookStore.com
+          div(class="nav navbar-nav navbar-right")
+            li(class="nav-item nav-item-bs")
+              a(class="nav-link" href="/") login 
+            li(class="nav-item nav-item-bs")
+              a(class="nav-link" href="/") register
     block body
 
     //-
@@ -67,4 +79,7 @@ html
           + Use a different preprocessor, like TypeScript
     // SCRIPTS
     script(src="/js/dependencies/sails.io.js")
+    script(src="/js/dependencies/jquery.min.js")
+    script(src="/js/dependencies/bootstrap.min.js")
+    script(src="/js/dependencies/jquery.validate.js")
     // SCRIPTS END
