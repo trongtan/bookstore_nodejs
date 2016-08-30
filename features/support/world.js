@@ -2,21 +2,21 @@ var webdriver = require('selenium-webdriver'),
     By = webdriver.By,
     until = webdriver.until;
 
+var zombie = require('zombie');
+
 function World() {
-  var driver = new webdriver.Builder()
-    .forBrowser('chrome')
-    .build();
+  this.browser = new zombie(); 
+
+  // this.browser = new webdriver.Builder()
+    // .forBrowser('chrome')
+    // .build();
 
   this.visit = function (url, callback) {
-    driver.get(url);
-    driver.findElement(By.name('q')).sendKeys('webdriver');
-    driver.findElement(By.name('btnG')).click();
-    driver.wait(until.titleIs('webdriver - Google Search'), 10000);
-    callback();
+    this.browser.visit(url, callback);
   };
 
   this.quit = function (callback) {
-    driver.quit();
+    this.browser.quit();
     callback();
   };
 }

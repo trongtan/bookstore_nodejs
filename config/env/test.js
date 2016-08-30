@@ -4,18 +4,18 @@ module.exports = {
    * Set the default database connection for models in the development       *
    * environment (see config/connections.js and config/models.js )           *
    ***************************************************************************/
-  connection: {
-    test: {
+  connections: {
+    testPostgresqlServer: {
       adapter: 'sails-memory'
-    },
+    }
   },
 
  models: {
-    connection: 'test',
+    connection: 'testPostgresqlServer',
     migrate: 'drop'
   },
 
-  port: 3000,
+  port: 4000,
 
   log: {
       level: 'error'

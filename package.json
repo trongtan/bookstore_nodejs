@@ -30,7 +30,7 @@
     "debug": "node debug app.js",
     "start": "node app.js",
     "test": "NODE_ENV=test istanbul cover _mocha -- -- ./test/bootstrap.spec.js -- ./test/unit/*.test.js",
-    "cucumber": "NODE_ENV=test istanbul cover cucumber.js"
+    "cucumber": "NODE_ENV=test node app.js && istanbul cover cucumber.js"
   },
   "main": "app.js",
   "repository": {
@@ -50,7 +50,9 @@
     "mocha": "^3.0.2",
     "must": "^0.13.2",
     "sails-memory": "^0.10.7",
+    "selenium-webdriver": "^3.0.0-beta-2",
     "should": "^11.1.0",
-    "sinon": "^1.17.5"
+    "sinon": "^1.17.5",
+    "zombie": "^4.2.1"
   }
 }
