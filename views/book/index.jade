@@ -1,0 +1,22 @@
+extends ../layout
+
+block body
+  div(class="container")
+    .row
+      for book in books
+        div(class="item")
+          img(class="photo" src=book.photo)
+          div(class="name")
+            =book.name
+          div(class="authorName") by 
+            =book.authorName
+          div(class="description")
+            =book.description
+            br
+            a(href="/") more detail
+          .row
+            .col-sm-6.unitPrice $ 
+              =book.unitPrice
+            .col-sm-6.addToCart Add
+
+

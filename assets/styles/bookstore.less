@@ -9,9 +9,79 @@
 @drakGray: #4A4A4A;
 @red: #D16565;
 
+@book-title-font-color: #fdb62b;
+@gray-medium-light: #eaeaea;
+@gray-light: #58595b;
+@current-category-font-color: #fdb62b;
+@nav-bar-background-color: #62594f;
+
 body {
   padding-top: 60px;
   padding-bottom: 40px;
+  font-family: 'Open Sans', Arial;
+}
+
+.item {
+  position: relative;
+  float: left;
+  min-height: 1px;
+  padding-left: 35px;
+  padding-right: 15px;
+  font-style: normal;
+  width: 250px;
+  border-style: dashed;
+  color: black;
+  border-right: thin dashed @gray-medium-light;
+  border-left: none;
+  border-top: none;
+  border-bottom: none;
+  margin: 20px 0px 20px 0px;
+
+  .photo {
+    width: 135px;
+    height: 195px;
+  }
+
+  .name {
+    font-size: 17px;
+    color: @book-title-font-color;
+    padding-top: 10px;
+    padding-bottom: 5px;
+  }
+
+  .authorName {
+    font-size: 14px;
+    color: @gray-light;
+    margin-top: -10px;
+  }
+
+  .rating {
+
+  }
+
+  .description {
+    height: 100px;
+    font-weight: normal;
+    font-size: 12px;
+  }
+
+  .unitPrice {
+    font-weight: normal;
+    font-size: 17px;
+    color: @orange;
+    padding-top: 8px;
+  }
+
+  .addToCart {
+    background: url('../images/sprite.png') no-repeat -590px -140px;
+    width: 96px;
+    height: 36px;
+    font-weight: normal;
+    font-size: 14px;
+    overflow: hidden;
+    color: @white;
+    padding-top: 8px;
+  }
 }
 
 .narrow-down-normal-bs {
@@ -20,6 +90,7 @@ body {
   height: 10px;
   border: none;
 }
+
 
 .jumbotron {
   text-align: center;

@@ -45,5 +45,5 @@ module.exports = {
     totalRatingCount: { //The total rating count is the total number of times this book is rated by users.
       type: 'integer'
     }
-  }
-};
+  },
+}

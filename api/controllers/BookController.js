@@ -6,6 +6,14 @@
  */
 
 module.exports = {
-	
+  index: function (req, res, next) {
+    Book.find(function (err, books) {
+      if (err) return next(err);
+      
+      res.view({
+        books: books
+      });
+    });
+  }
 };
 
