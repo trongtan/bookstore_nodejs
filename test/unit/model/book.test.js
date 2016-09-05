@@ -1,5 +1,5 @@
-var should = require('should');
-var expect = require('expect.js');
+var should = require('chai').should;
+var expect = require('chai').expect;
 var factory = require("sails-factory");
 
 describe('BookModel', function() {
@@ -12,12 +12,12 @@ describe('BookModel', function() {
 
     describe('provide required fields', function() {
       it('does not throw any err', function (done) {
-        Book.create(bookInfo, function bookCreated (err, book) {    
-          should.not.exist(err);
+        Book.create(bookInfo, function bookCreated (err, book) {   
+          expect(err).to.be.null
 
-          expect(book.name).to.be(bookInfo.name);
-          expect(book.description).to.be(bookInfo.description);
-          expect(book.unitPrice).to.be(bookInfo.unitPrice);
+          expect(book.name).to.equal(bookInfo.name);
+          expect(book.description).to.equal(bookInfo.description);
+          expect(book.unitPrice).to.equal(bookInfo.unitPrice);
           done();
         });
       });
@@ -30,9 +30,9 @@ describe('BookModel', function() {
 
       it('should throw an error', function (done) {
         Book.create(bookInfo, function bookCreated (err, book) {     
-          should.exist(err);
+          expect(err).to.exist
 
-          expect(book).to.be(undefined);
+          expect(book).to.be.undefined
           done();
         });
       })
@@ -45,9 +45,9 @@ describe('BookModel', function() {
 
       it('should throw an error', function (done) {
         Book.create(bookInfo, function bookCreated (err, book) {     
-          should.exist(err);
+          expect(err).to.exist
 
-          expect(book).to.be(undefined);
+          expect(book).to.be.undefined
           done();
         });
       })

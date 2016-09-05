@@ -40,6 +40,8 @@
   "license": "",
   "devDependencies": {
     "assert": "^1.4.1",
+    "browser": "^0.2.6",
+    "chai": "^3.5.0",
     "coveralls": "^2.11.12",
     "cucumber": "^1.2.2",
     "expect.js": "^0.3.1",
