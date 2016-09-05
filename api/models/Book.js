@@ -31,7 +31,8 @@ module.exports = {
     },
 
     unitPrice: {
-      type: 'float'
+      type: 'float',
+      min: 0.1
     },
 
     photo: { // The photo column is a string representing the path of the photo in the web server.

@@ -15,7 +15,6 @@ test:
   override:
     # run test
     - npm test
-    - npm run cucumber
   post:
     # copy coverage result to artifacts
     - cp -r coverage $CIRCLE_ARTIFACTS

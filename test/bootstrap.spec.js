@@ -2,7 +2,6 @@
 var sails = require('sails');
 
 before(function(done) {
-
   // Increase the Mocha timeout so that Sails has enough time to lift.
   this.timeout(5000);
 
@@ -12,7 +11,8 @@ before(function(done) {
     environment: 'test',
   }, function(err, server) {
     if (err) return done(err);
-    // here you can load fixtures, etc.
+
+    require("sails-factory").load();
     done(err, sails);
   });
 });

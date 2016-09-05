@@ -29,8 +29,7 @@
   "scripts": {
     "debug": "node debug app.js",
     "start": "node app.js",
-    "test": "NODE_ENV=test istanbul cover _mocha -- -- ./test/bootstrap.spec.js -- ./test/unit/*.test.js",
-    "cucumber": "NODE_ENV=test node app.js && istanbul cover cucumber.js"
+    "test": "istanbul cover _mocha -- -- ./test/bootstrap.spec.js -- ./test/unit/**/*.test.js"
   },
   "main": "app.js",
   "repository": {
@@ -43,12 +42,18 @@
     "assert": "^1.4.1",
     "coveralls": "^2.11.12",
     "cucumber": "^1.2.2",
+    "expect.js": "^0.3.1",
+    "factory-girl": "^4.0.0-beta.4",
+    "factory-lady": "^0.1.0",
+    "faker": "^3.1.0",
     "grunt-cli": "^1.2.0",
     "grunt-coveralls": "^1.0.1",
     "grunt-mocha-istanbul": "^5.0.2",
     "istanbul": "^0.4.5",
     "mocha": "^3.0.2",
     "must": "^0.13.2",
+    "rosie": "^1.6.0",
+    "sails-factory": "^0.4.0",
     "sails-memory": "^0.10.7",
     "selenium-webdriver": "^3.0.0-beta-2",
     "should": "^11.1.0",
