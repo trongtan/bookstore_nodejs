@@ -9,7 +9,7 @@ module.exports = function(factory) {
     .attr("publisherName", faker.lorem.words)
     .attr("publishedDate", faker.date.past)
     .attr("unitPrice", faker.random.number)
-    .attr("photo", faker.random.image)
+    // .attr("photo", faker.random.image)
     .attr("totalRatingValue", faker.random.number)
     .attr("totalRatingCount", faker.random.number);
 };

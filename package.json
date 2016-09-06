@@ -29,7 +29,7 @@
   "scripts": {
     "debug": "node debug app.js",
     "start": "node app.js",
-    "test": "istanbul cover _mocha -- -- ./test/bootstrap.spec.js -- ./test/unit/**/*.test.js"
+    "test": "istanbul cover _mocha -- -- ./test/bootstrap.spec.js -- ./test/**/**/*.test.js"
   },
   "main": "app.js",
   "repository": {
@@ -41,7 +41,11 @@
   "devDependencies": {
     "assert": "^1.4.1",
     "browser": "^0.2.6",
+    "casper-chai": "^0.3.0",
+    "casperjs": "^1.1.3",
     "chai": "^3.5.0",
+    "chai-dom": "^1.4.2",
+    "chai-webdriver": "^1.2.0",
     "coveralls": "^2.11.12",
     "cucumber": "^1.2.2",
     "expect.js": "^0.3.1",
@@ -53,13 +57,16 @@
     "grunt-mocha-istanbul": "^5.0.2",
     "istanbul": "^0.4.5",
     "mocha": "^3.0.2",
+    "mocha-casperjs": "^0.5.7",
     "must": "^0.13.2",
+    "phantomjs": "^2.1.7",
     "rosie": "^1.6.0",
     "sails-factory": "^0.4.0",
     "sails-memory": "^0.10.7",
-    "selenium-webdriver": "^3.0.0-beta-2",
+    "selenium-webdriver": "^2.42.0",
     "should": "^11.1.0",
     "sinon": "^1.17.5",
+    "supertest": "^2.0.0",
     "zombie": "^4.2.1"
   }
 }
