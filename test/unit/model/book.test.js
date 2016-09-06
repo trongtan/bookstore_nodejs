@@ -31,6 +31,7 @@ describe('BookModel', function() {
       it('should throw an error', function (done) {
         Book.create(bookInfo, function bookCreated (err, book) {     
           expect(err).to.exist
+          expect(err.invalidAttributes.name).to.exist
 
           expect(book).to.be.undefined
           done();
@@ -46,6 +47,7 @@ describe('BookModel', function() {
       it('should throw an error', function (done) {
         Book.create(bookInfo, function bookCreated (err, book) {     
           expect(err).to.exist
+          expect(err.invalidAttributes.unitPrice).to.exist
 
           expect(book).to.be.undefined
           done();

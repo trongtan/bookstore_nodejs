@@ -11,5 +11,6 @@ module.exports = function(factory) {
     .attr("unitPrice", faker.random.number)
     // .attr("photo", faker.random.image)
     .attr("totalRatingValue", faker.random.number)
-    .attr("totalRatingCount", faker.random.number);
+    .attr("totalRatingCount", faker.random.number)
+    .attr("owner", 1);
 };
