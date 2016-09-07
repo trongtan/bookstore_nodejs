@@ -1,5 +1,7 @@
 .navbar-bs {
-  background-color: @orange
+  background-color: @orange;
+  background-image: url("../images/banner.svg");
+  background-repeat: repeat-y;
 }
 
 .navbar-brand-bs {
@@ -8,7 +10,65 @@
   font-weight: bold;
 }
 
-.nav-item-bs {
+.navbar-item-bs {
   font-size: 12px;
   font-weight: bold;
+}
+
+.navbar-top {
+  background-color: @nav-bar-background-color;
+  height: 60px;
+
+  #navbar-top-seach-box {
+    margin-top: 10px;    
+
+    #seach-box-text-input {
+      width: 60%;
+      float: left;
+
+      input {
+        width: 100%;
+        font-size: 14px;
+        height: 40px;
+        border-radius: 0px;
+        border: 0px;
+      }
+    }
+
+    .separator {
+      float: left;
+      padding-top: 10px;
+      background-color: white;
+      height: 40px;
+    }
+
+    #seach-box-category-select {
+      width: 29%;
+      float: left;
+      padding-right: 5px;
+
+      button {
+        border: 0;
+        background: white;
+        width: 100%;
+        text-align: left;
+        font-size: 14px;
+        height: 40px;
+        border-radius: 0px;
+        border: 0px;
+      }
+    }
+
+    #submit-search {
+      width: 10%;
+      float: left;
+      background: url('../images/sprite.png') no-repeat -580px -40px;
+      height: 40px;
+      padding: 10px 10px;
+    }
+  }
+}
+
+.navbar-search-button {
+
 }

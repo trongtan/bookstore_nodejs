@@ -1,16 +1,36 @@
 extends ../layout
 
 block body
-  div(class="container" id="books")
-    .row
+  .container-fluid.navbar-top#navbar-top
+    .container
+      .row
+        #navbar-top-seach-box.col-md-6
+          form.form-inline.pull-xs-left
+            #seach-box-text-input
+              input.form-control(type="text", placeholder="Search by author, title")
+            span.separator |
+            #seach-box-category-select
+              .dropdown
+                button.btn.btn-secondary.dropdown-toggle#search-box-category-select-dropdown-button(data-toggle="dropdown" aria-haspopup="true" aria-expanded="false") All Categories  
+                  span.caret
+                .dropdown-menu(aria-labelledby="search-box-category-select-dropdown-button")
+                  button.dropdown-item(type="button") Action
+                  br
+                  button.dropdown-item(type="button") Another Action
+                  br
+            #submit-search.btn.btn-outline-success(type="submit")
+              
+        #navbar-top-category-select.col-md-4
+  .container
+    .row#books
       for book in books
-        div(class="item")
+        .item
           img(class="photo" src=book.photo)
-          div(class="name")
+          .name
             =book.name
-          div(class="authorName") by 
+          .authorName by 
             =book.authorName
-          div(class="description")
+          .description
             =book.description
             br
             a(href="/") more detail
@@ -18,5 +38,3 @@ block body
             .col-sm-6.unitPrice $ 
               =book.unitPrice
             .col-sm-6.addToCart Add
-
-

@@ -67,6 +67,7 @@
     "should": "^11.1.0",
     "sinon": "^1.17.5",
     "supertest": "^2.0.0",
+    "supertest-chai": "0.0.8",
     "zombie": "^4.2.1"
   }
 }
