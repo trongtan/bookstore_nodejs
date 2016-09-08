@@ -1,5 +1,5 @@
 doctype html
-html
+html(ng-app="bookStoreApp")
   head
     if locals.title
       title= title
@@ -60,7 +60,7 @@ html
           + Internationalize your client-side templates using a server-side
             stringfile before they're served.
     // TEMPLATES
-    
+    script(type="text/javascript", src="/jst.js")
     // TEMPLATES END
     //-
       Client-side Javascript
@@ -81,5 +81,10 @@ html
     script(src="/js/dependencies/sails.io.js")
     script(src="/js/dependencies/jquery.min.js")
     script(src="/js/dependencies/bootstrap.min.js")
+    script(src="/js/dependencies/angular.min.js")
+    script(src="/js/dependencies/angular-route.min.js")
     script(src="/js/dependencies/jquery.validate.js")
+    script(src="/js/dependencies/ng-text-truncate.js")
+    script(src="/js/app.js")
+    script(src="/js/service/BookStoreService.js")
     // SCRIPTS END

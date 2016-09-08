@@ -1,0 +1,23 @@
+<div ng-include="'templates/partial/_searchBookNav.html'"></div>
+
+<div class="container" ng-controller="BookStoreCtrl as books">
+    <div class="row" id="books">
+        <div class="item" ng-repeat="book in books">
+            <img class="photo" src=book.photo>
+            <div class="name"> 
+                <p ng-text-truncate=book.name ng-tt-words-threshold="15" ng-tt-no-toggling></p>
+            </div>
+            <div class="authorName"> by {{book.authorName}} </div>
+            <div class="description">
+                <p ng-text-truncate=book.description ng-tt-words-threshold="30" ng-tt-no-toggling></p>
+            </div>
+            <div>
+                <a href="/"> more detail </a>
+            </div>
+            <div class="row">
+                <div class="col-sm-6 unitPrice"> $ {{book.unitPrice}} </div>
+                <div class="col-sm-6 addToCart"> Add </div>
+            </div>
+        </div>
+    </div>
+</div>
