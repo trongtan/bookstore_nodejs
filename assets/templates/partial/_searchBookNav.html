@@ -1,4 +1,4 @@
-<div class="container-fluid navbar-top" id="navbar-top">
+<div class="container-fluid navbar-top" id="navbar-top" ng-controller="BookStoreCtrl">
     <div class="container">
         <div class="row">
             <div class="col-md-6" id="navbar-top-seach-box">
@@ -13,8 +13,9 @@
                                 <span class="caret"> </span>
                             </button>
                             <div class="dropdown-menu" aria-labelledby="search-box-category-select-dropdown-button">
-                                <button class="dropdown-item" type="button"> Action </button>
-                                <button class="dropdown-item" type="button"> Another Action </button>
+                                <div ng-repeat="category in categories">
+                                    <button class="dropdown-item" type="button"> {{category.name}} </button>
+                                </div>
                             </div>
                         </div>
                     </div>

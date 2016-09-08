@@ -13,24 +13,17 @@ bookStoreApp.config(['$routeProvider',
     })
   }]);
 
-bookStoreApp.controller('BookStoreCtrl', ['$scope', '$rootScope', 'BookStoreService', function($scope, $rootScope, BookStoreService) {
+bookStoreApp.controller('BookStoreCtrl', ['$scope', '$rootScope', 'BookService', 'CategoryService',
+  function($scope, $rootScope, BookService, CategoryService) {
   $scope.formData = {};
   $scope.books = [];
+  $scope.categories = [];
 
-  BookStoreService.getBooks().then(function(response) {
+  BookService.getBooks().then(function(response) {
     $scope.books = response;
   });
 
-  // $scope.addTodo = function() {
-  //   TodoService.addTodo($scope.formData).then(function(response) {
-  //     $scope.todos.push($scope.formData)
-  //     $scope.formData = {};
-  //   });
-  // }
-
-  // $scope.removeTodo = function(todo) {
-  //   TodoService.removeTodo(todo).then(function(response) {
-  //     $scope.todos.splice($scope.todos.indexOf(todo), 1)
-  //   });
-  // }
+  CategoryService.getCategories().then(function(response) {
+    $scope.categories = response;
+  });
 }]);
